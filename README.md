@@ -48,4 +48,3 @@ npm install -g miio homebridge-mi-remote
     }
 ]
 ```
-1. support for Switch and IRlearn. 
