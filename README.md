@@ -104,7 +104,7 @@ Example:
                 }
             },
             {
-                "type": "lg-air-conditioner",
+                "type": "LGAirConditioner",
                 "name": "Thermostat",
                 "info": {
                     "Manufacturer": "LG Electronics Inc.",
