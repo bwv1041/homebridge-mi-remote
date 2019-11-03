@@ -1,20 +1,14 @@
 {
-  "name": "homebridge-mi-remote",
-  "description": "Mi Universal Remote plugin for homebridge",
-  "version": "0.2.0",
-  "license": "GPLV3",
+  "description": "A homebridge-plugin for Mi Universal Remote device",
+  "engines": {
+    "node": ">=6.6.0",
+    "homebridge": ">=0.2.0",
+    "miio": ">=0.15.6"
+  },
   "keywords": [
     "homebridge-plugin"
   ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/bwv1041/homebridge-mi-remote.git"
-  },
-  "bugs": {
-    "url": "https://github.com/bwv1041/homebridge-mi-remote"
-  },
-  "engines": {
-    "node": ">=7.6.0",
-    "homebridge": ">=0.2.0"
-  },
+  "license": "UNLICENSED",
+  "name": "homebridge-mi-remote",
+  "version": "0.3.7"
 }
