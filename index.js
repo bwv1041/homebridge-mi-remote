@@ -117,18 +117,13 @@ MiRemotePlatform.prototype.accessories = function (callback) {
     callback(LoadedAccessories);
 }
 
-MiRemotePlatform.prototype.getMiioDevice = function (configarray, dthat) {
-    let device;
+MiRemotePlatform.prototype.getMiioDevice = async (configarray, dthat) => {
     try {
-        device = new miio.device(configarray)
-            .then(function (device) {
-                dthat.readydevice = true;
-                dthat.device = device;
-                //that.log.debug("Linked To " + configarray.address);
-            })
-            .catch(err => console.log('Error occurred:', err));
-        //this.log.debug("Lowercase Success！");
+        dthat.device = await miio.device(configarray);
+        dthat.readydevice = true;
+        dthat.platform.log.debug("Linked To " + configarray.address);
     } catch (e) {
-        //this.log.debug("Lowercase failed");
+        dthat.platform.log.warn('Fail to discover the device. Retry in 1 minute', e);
+        setTimeout(() => { dthat.platform.getMiioDevice(configarray, dthat) }, 60000);
     }
 }
